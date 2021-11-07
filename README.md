@@ -31,3 +31,8 @@ Script to create and build a basic configuration for a Python Project.
 ├── README.md
 ```
 
+## Basic Usage
+
+```bash
+sh download.sh
+```
