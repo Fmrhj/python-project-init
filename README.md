@@ -1,6 +1,6 @@
 # Python Project init
 
-Script to create and build basic configuration for a Python Project.
+Script to create and build a basic configuration for a Python Project.
 
  It adds:
 -  basic .vscode configuration
