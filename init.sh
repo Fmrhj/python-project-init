@@ -39,4 +39,8 @@ IGNORE_DIRS=(.vscode .venv data)
     echo "$dir" >> .gitignore
 done
 
+# Create Pipenv environment: it will create a local .venv due to the .vscode settings
+# pipenv is a requirement: pip install pipenv
+pipenv shell
+
 echo "Python Project initialized!"
