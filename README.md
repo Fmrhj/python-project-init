@@ -5,7 +5,7 @@ Script to create and build a basic configuration for a Python Project.
  It adds:
 -  basic .vscode configuration
 -  `Makefile`
--  .isort.cfg
+-  [.isort.cfg](https://github.com/PyCQA/isort)
 -  [Pipfile](https://pipenv-fork.readthedocs.io/en/latest/)
 -  *Directory structure*:
 
