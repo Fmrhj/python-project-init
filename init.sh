@@ -1,5 +1,27 @@
 #/bin/bash
 
+: '
+2021-07-11
+
+Basic structure based on $BASIC_DIRS and $MODULES. Change accordingly.
+
+├── Makefile
+├── Pipfile
+├── README.md
+├── bin
+│   ├── __init__.py
+│   ├── model
+│       ├── __init__.py
+│   ├── preprocessing
+│       ├── __init__.py
+│   ├── tests
+│       ├── __init__.py
+│   └── utils
+│       ├── __init__.py
+├── data
+└── outputs
+'
+
 echo "Creating basic files and directories:"
 
 BASIC_DIRS=(data outputs bin .vscode)
@@ -24,10 +46,15 @@ done
 # Create README.md
 [[ -f README.md ]] || touch README.md
 
-SETTINGS_URL="https://gist.githubusercontent.com/Fmrhj/5f1ff5446b59c1ecc55d35271f14e69e/raw/0a88bb24e8f8ac8155a5e160c00c3a3a27967e6f/settings.json"
+# Download sort configuration
+ISORT_CFG="https://raw.githubusercontent.com/Fmrhj/python-project-init/main/.isort.cfg"
+ISORT_TARGET=".isort.cfg"
+[[ -f $ISORT_TARGET ]] || curl -o $ISORT_TARGET $SETTINGS_URL &> /dev/null
 
 # Create a vscode/settings.json file
-[[ -f .vscode/settings.json ]] || curl -o .vscode/settings.json $SETTINGS_URL &> /dev/null
+SETTINGS_URL="https://gist.githubusercontent.com/Fmrhj/5f1ff5446b59c1ecc55d35271f14e69e/raw/0a88bb24e8f8ac8155a5e160c00c3a3a27967e6f/settings.json"
+VSCODE_SETTINGS=".vscode/settings.json"
+[[ -f $VSCODE_SETTINGS ]] || curl -o $VSCODE_SETTINGS $SETTINGS_URL &> /dev/null
 
 # Initialize git
 [ -d .git ] ||git init
@@ -40,7 +67,9 @@ IGNORE_DIRS=(.vscode .venv data)
 done
 
 # Create Pipenv environment: it will create a local .venv due to the .vscode settings
-# pipenv is a requirement: pip install pipenv
 pipenv shell
+
+# Remove init file
+rm -f init.sh
 
 echo "Python Project initialized!"
