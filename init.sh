@@ -7,6 +7,7 @@ Basic structure based on $BASIC_DIRS and $MODULES. Change accordingly.
 
 ├── Makefile
 ├── Pipfile
+├── .isort.cfg
 ├── README.md
 ├── bin
 │   ├── __init__.py
@@ -47,14 +48,14 @@ done
 [[ -f README.md ]] || touch README.md
 
 # Download sort configuration
-ISORT_CFG="https://raw.githubusercontent.com/Fmrhj/python-project-init/main/.isort.cfg"
+ISORT_CFG="https://raw.githubusercontent.com/Fmrhj/python-project-init/main/settings/isort.cfg"
 ISORT_TARGET=".isort.cfg"
 [[ -f $ISORT_TARGET ]] || curl -o $ISORT_TARGET $SETTINGS_URL &> /dev/null
 
 # Create a vscode/settings.json file
-SETTINGS_URL="https://gist.githubusercontent.com/Fmrhj/5f1ff5446b59c1ecc55d35271f14e69e/raw/0a88bb24e8f8ac8155a5e160c00c3a3a27967e6f/settings.json"
-VSCODE_SETTINGS=".vscode/settings.json"
-[[ -f $VSCODE_SETTINGS ]] || curl -o $VSCODE_SETTINGS $SETTINGS_URL &> /dev/null
+SETTINGS_URL="https://github.com/Fmrhj/python-project-init/blob/main/settings/vscode.json"
+VSCODE_SETTINGS_TARGET=".vscode/settings.json"
+[[ -f $VSCODE_SETTINGS_TARGET ]] || curl -o $VSCODE_SETTINGS_TARGET $SETTINGS_URL &> /dev/null
 
 # Initialize git
 [ -d .git ] ||git init
