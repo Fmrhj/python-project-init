@@ -1,0 +1,54 @@
+{
+  "python.formatting.provider": "yapf",
+  "files.trimTrailingWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.rulers": [120],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "pyright.disableLanguageServices": false,
+  "pyright.disableOrganizeImports": true,
+  "python.languageServer": "Default",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.disabled": ["inherit-non-class"],
+  // Python linting
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.ignorePatterns": ["**/.venv", "**/.mypy_cache", "**/typings"],
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintUseMinimalCheckers": false,
+  "python.linting.mypyEnabled": false,
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--follow-imports=silent",
+    "--show-column-numbers",
+    "--disable=C0111"
+  ],
+  // Python Docstring'
+  "autoDocstring.docstringFormat": "google",
+  // Python testing
+  "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "test_*.py"],
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.pythonPath": ".venv/bin/",
+  "python.linting.pylintPath": ".venv/bin/pylint",
+  "terminal.integrated.env.windows": {
+    "PIPENV_VENV_IN_PROJECT": "1",
+    "PIPENV_IGNORE_VIRTUALENVS": "1",
+    "PYOPENCL_COMPILER_OUTPUT": "1"
+  },
+  "terminal.integrated.env.linux": {
+    "PIPENV_VENV_IN_PROJECT": "1",
+    "PIPENV_IGNORE_VIRTUALENVS": "1",
+    "PYOPENCL_COMPILER_OUTPUT": "1"
+  },
+  "terminal.integrated.env.osx": {
+    "PIPENV_VENV_IN_PROJECT": "1",
+    "PIPENV_IGNORE_VIRTUALENVS": "1",
+    "PYOPENCL_COMPILER_OUTPUT": "1"
+  },
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100
+}
