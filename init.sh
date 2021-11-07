@@ -30,7 +30,7 @@ SETTINGS_URL="https://gist.githubusercontent.com/Fmrhj/5f1ff5446b59c1ecc55d35271
 [[ -f .vscode/settings.json ]] || curl -o .vscode/settings.json $SETTINGS_URL &> /dev/null
 
 # Initialize git
-[ -d .git ] || git init
+[ -d .git ] ||git init
 
 # Create .gitignore
 IGNORE_DIRS=(.vscode .venv data)
