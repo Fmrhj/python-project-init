@@ -12,7 +12,6 @@
   "python.languageServer": "Default",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.disabled": ["inherit-non-class"],
-  // Python linting
   "python.linting.enabled": true,
   "python.linting.lintOnSave": true,
   "python.linting.ignorePatterns": ["**/.venv", "**/.mypy_cache", "**/typings"],
@@ -25,9 +24,7 @@
     "--show-column-numbers",
     "--disable=C0111"
   ],
-  // Python Docstring'
   "autoDocstring.docstringFormat": "google",
-  // Python testing
   "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "test_*.py"],
   "python.testing.unittestEnabled": true,
   "python.testing.pytestEnabled": false,
