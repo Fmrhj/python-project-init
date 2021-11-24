@@ -58,7 +58,7 @@ VSCODE_SETTINGS_TARGET=".vscode/settings.json"
 [[ -f $VSCODE_SETTINGS_TARGET ]] || curl -o $VSCODE_SETTINGS_TARGET $SETTINGS_URL &> /dev/null
 
 # Initialize git
-[ -d .git ] ||git init
+[ -d .git ] || git init
 
 # Create .gitignore
 IGNORE_DIRS=(.vscode .venv data)
