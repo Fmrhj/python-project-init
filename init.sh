@@ -47,6 +47,11 @@ done
 # Create README.md
 [[ -f README.md ]] || touch README.md
 
+# Create Dockerfile
+DOCKERFILE_URL="https://github.com/Fmrhj/python-project-init/blob/main/settings/Dockerfile"
+DOCKERFILE="Dockerfile"
+[[ -f Dockerfile ]] || curl -o $DOCKERFILE $DOCKERFILE_URL &> /dev/null
+
 # Download sort configuration
 ISORT_CFG="https://raw.githubusercontent.com/Fmrhj/python-project-init/main/settings/isort.cfg"
 ISORT_TARGET=".isort.cfg"
