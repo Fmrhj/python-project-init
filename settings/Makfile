@@ -1,0 +1,16 @@
+CONTAINER_NAME=python-caas
+
+install: requirements.txt Pipfile
+    pipenv install
+
+lock:
+    pipenv lock -r > requirements.txt
+
+build:
+    docker build -t $(CONTAINER_NAME) .
+ 
+run:
+    python app.py
+  
+clean:
+    rm -rf __pycache__
