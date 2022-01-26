@@ -1,12 +1,13 @@
 # Python Project init
 
-Script to create and build a basic configuration for a Python Project.
+Script to create a scaffolded Python Project.
 
  It adds:
 -  basic .vscode configuration
 -  `Makefile`
 -  [.isort.cfg](https://github.com/PyCQA/isort)
 -  [Pipfile](https://pipenv-fork.readthedocs.io/en/latest/)
+-  [Dockerfile](https://github.com/docker-library/python/blob/6a2c0f48f011aa279a0c9190725fc84a220460bc/3.9/bullseye/slim/Dockerfile)
 -  *Directory structure*:
 
 ```text
@@ -29,6 +30,7 @@ Script to create and build a basic configuration for a Python Project.
 ├── Pipfile
 ├── .isort.cfg
 ├── README.md
+├── Dockerfile
 ```
 
 ## Basic Usage
