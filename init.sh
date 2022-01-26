@@ -42,7 +42,9 @@ for dir in "${BASIC_DIRS[@]}"; do
 done
 
 # Create Makefile
-[[ -f Makefile ]] || touch Makefile
+MAKEFILE_URL="https://github.com/Fmrhj/python-project-init/blob/main/settings/Makefile"
+MAKEFILE="Makefile"
+[[ -f Makefile ]] || curl -o $MAKEFILE $MAKEFILE_URL &> /dev/null
 
 # Create README.md
 [[ -f README.md ]] || touch README.md
